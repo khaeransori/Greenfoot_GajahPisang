@@ -39,6 +39,7 @@ public class Gajah extends Actor
     public void eatPisang(){
         Actor Pisang = getOneObjectAtOffset(0, 0, Pisang.class);
         if(Pisang!=null){
+            Greenfoot.playSound("pop.wav");
             ((Back) getWorld()).countPop();
             getWorld().removeObject(Pisang);
         }
